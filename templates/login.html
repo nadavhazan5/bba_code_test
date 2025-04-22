@@ -1,0 +1,13 @@
+{% if success_message %}
+  <p>User registered successfully!</p>
+{% endif %}
+<h2>Login</h2>
+<form method="POST">
+  Email: <input type="text" name="email" required><br>
+  Password: <input type="password" name="password" required><br>
+  <input type="submit" value="Login">
+</form>
+{% if error_message %}
+  <p style="color: red;">{{ error_message }}</p>
+{% endif %}
+<p>Don't have an account? Register <a href="/register">here</a></p>
